@@ -79,7 +79,7 @@ class MapScreen extends React.Component<MapScreenProps> {
     }
 
     render(){
-        
+
         const RenderedBikes = () : any => {return this.props.bikes.map((element : Bike, index : number) => {
 
                 const cycleImage = require("../../assets/icons/cycle_enabled.png");

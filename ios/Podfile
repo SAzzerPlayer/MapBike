@@ -54,12 +54,18 @@ target 'BikeMapTypeScript' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  # Mapbox
+  pod 'react-native-mapbox-gl', :path => '../node_modules/@react-native-mapbox-gl/maps'
+
   target 'BikeMapTypeScriptTests' do
     inherit! :complete
     # Pods for testing
   end
 
   use_native_modules!
+  #Mapbox
+  # don't need use_frameworks
+  pod 'NoUseFrameworks-MapboxMobileEvents',  :podspec => '../node_modules/@react-native-mapbox-gl/maps/ios/NoUseFrameworks-MapboxMobileEvents/NoUseFrameworks-MapboxMobileEvents.podspec.json'
 
   # Enables Flipper.
   #
